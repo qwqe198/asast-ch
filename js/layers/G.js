@@ -1885,7 +1885,7 @@ addLayer("G", {
         canClick() { return player.G.GG.gte(39) && !gcs(this.layer,this.id) && gcs(this.layer,51) },
         onClick() { 
             player.G.Gtc = player.G.Gtc.add(39)
-            setClickableState(this.layer,this.layer,1)
+            setClickableState(this.layer,this.id,1)
         },
         effect(){
             let ef = player.G.Gsi.add(10).log(10).add(10).log(10).pow(1.5).div(250).add(249/250)
