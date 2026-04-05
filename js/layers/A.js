@@ -73,10 +73,10 @@ addLayer("A", {
     },
     microtabs: {
         stuff: {       
-            "升级": {
+            "upg": {
                 unlocked() {return true},
                 content: [ "upgrades"]}, 
-            "挑战": {
+            "chal": {
                 unlocked() {return (upg("B", 25))},
                 content: ["challenges"]    },
         }

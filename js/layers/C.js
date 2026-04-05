@@ -80,15 +80,15 @@ addLayer("C", {
     },
     microtabs: {
         stuff: {       
-            "升级": {
+            "upg": {
                 unlocked() {return true},
                 content: ["upgrades"]
             }, 
-            "里程碑": {
+            "mil": {
                 unlocked() {return true},
                 content: ["milestones"]
             },
-            "挑战": {
+            "chal": {
                 unlocked() {return (hasUpgrade("D",15))},
                 content: ["challenges"]
             },

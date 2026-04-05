@@ -191,19 +191,19 @@ addLayer("E", {
     },
     microtabs: {
         stuff: {       
-            "升级": {
+            "upg": {
                 unlocked() {return true},
                 content: ["upgrades"]
             }, 
-            "购买项": {
+            "buy": {
                 unlocked() {return (hasMilestone("E",0))},
                 content: [["buyables",[1,2]]]
             },
-            "里程碑": {
+            "mil": {
                 unlocked() {return (hasUpgrade("E",14))},
                 content: ["milestones"]
             },
-            "挑战": {
+            "chal": {
                 unlocked() {return (hasMilestone("E",2))},
                 content: ["challenges"]
             },

@@ -72,17 +72,17 @@ addLayer("B", {
     softcapPower(){return new Decimal(1)},
     microtabs: {
         stuff: {       
-            "升级": {
+            "upg": {
                 unlocked() {return true},
                 content: [ "upgrades"]
             }, 
-            "购买项": {
+            "buy": {
                 unlocked() {return (hasMilestone("D", 2))},
                 content: [
                     "buyables"
                 ]
             },  
-            "里程碑": {
+            "mil": {
                 unlocked() {return (hasUpgrade("B", 53))},
                 content: ["milestones"]
             },

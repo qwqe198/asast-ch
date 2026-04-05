@@ -83,11 +83,11 @@ addLayer("D", {
     softcapPower(){return new Decimal(1)},
     microtabs: {
         stuff: {       
-            "升级": {
+            "upg": {
                 unlocked() {return true},
                 content: ["upgrades"]
             }, 
-            "里程碑": {
+            "mil": {
                 unlocked() {return true},
                 content: ["milestones"]
             },

@@ -196,25 +196,25 @@ addLayer("F", {
     },
     microtabs: {
         stuff: {       
-            "升级": {
+            "upg": {
                 unlocked() { return true },
                 content: [
                     ["raw-html", () => `<h4 style="opacity:.5">欢迎来到第3行。F 会重置第1-2行。</h4>`],
                     "upgrades"
                 ]
             }, 
-            "里程碑": {
+            "mil": {
                 unlocked() { return true },
                 content: [
                     ["raw-html", () => `<h4 style="opacity:.5">随着你获得更多 F，保留更多内容。</h4>`],
                     "milestones"
                 ]
             },
-            "挑战": {
+            "chal": {
                 unlocked() { return (mil("F",8)) },
                 content: ["challenges"]
             },
-            "F 维度": {
+            "Fd": {
                 unlocked() { return (mil("Z",13)) },
                 content: [
                     ["raw-html", () => `<h4 style="opacity:.5">这部分改编自反物质维度（但更简单）。<br></h4>`],
