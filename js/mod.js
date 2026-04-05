@@ -112,6 +112,7 @@ function getPointGen() {
     if (player.Z.points.gte(30))gain = Decimal.pow(10,gain.add(10).log10().pow(tmp.G.gsef2))
             
     let tet=n(0)
+              if (hasUpgrade('G',174))  tet=tet.add(0.00031);
     if(gcs('I',124))  tet=tet.add(0.3)
     if(gcs('I',125))  tet=tet.add(0.5)
     if(gcs('I',135))  tet=tet.add(1)
@@ -121,7 +122,7 @@ function getPointGen() {
     if(gcs('I',311)) {if(gain.gte('10^^25')&&mil('I',21)) gain=n(10).tetrate(gain.max(10).slog().add(tet))
         else if(gain.gte('10^^10')&&gba('J',101).gte(23)) gain=n(10).tetrate(gain.max(10).slog().add(tet))
         else gain=n(10).tetrate(gain.max(10).slog().sub(tmp.I.resv[0]).max(0))}
-    else{if(gain.gte('10^^10'))  gain=n(10).tetrate(gain.max(10).slog().add(tet))}
+    else{if(gain.gte('10^^6'))  gain=n(10).tetrate(gain.max(10).slog().add(tet))}
 //
     gain=gain.min(tmp.H.php)
     

@@ -4260,6 +4260,7 @@ buyables: {
             if(upg('G',134))ret=Decimal.pow(10,ret.add(1).log10().pow(1.01));
             return Decimal.pow(10,ret);
         }
+
         if(player.Z.points.gte(34))return Decimal.pow(10,ret.log10().pow(6));
         if(player.Z.points.gte(31))return Decimal.pow(10,ret.log10().pow(1.2));
         return ret;
@@ -4312,7 +4313,7 @@ buyables: {
     gsir(){//real eff on Gs gain
         let ef=player.G.Gs.add(10).log(10).pow(tmp.G.gsief).max(1)
         return ef}, 
-    gseb(){
+  gseb(){
     if(!hasUpgrade('G',101) && player.Z.points.lt(34))return n(0);
         let ef=n(0)
         let exp=n(player.Z.points.gte(35)?1:0.9)
@@ -4330,6 +4331,7 @@ if (hasUpgrade('G',61) && player.Z.points.gte(35))ef = ef.mul(10)
         if(gcs('G',21))  ef=ef.mul(clickableEffect('G',21))
         if(gcs('G',33))  ef=ef.mul(clickableEffect('G',33))
         if(gcs('G',71))  ef=ef.mul(clickableEffect('G',71))
+        if (hasUpgrade('G',133))ef = ef.pow(1.125)
         if(gcs('G',61))  ef=ef.pow(clickableEffect('G',61))
         if(gcs('G',122))  ef=ef.pow(1.01)
         if(mil('G',25))    {if(gcs('G',102))  ef=ef.pow(1.005)
@@ -4422,6 +4424,7 @@ if (hasUpgrade('G',61) && player.Z.points.gte(35))ef = ef.mul(10)
         ef=ef.mul(buyableEffect('G',81))
         if(upg('G',173)) ef = ef.mul(upgradeEffect('G',173))
     if(upg("G", 175) && player.Z.points.gte(36))ef=ef.mul(tmp.G.gsgr)
+         if (hasUpgrade('G',133))ef = ef.pow(1.0075)
     return ef;
     },
     gsqef(){
