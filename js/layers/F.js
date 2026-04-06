@@ -762,7 +762,7 @@ addLayer("F", {
             title: "Fd1", 
             cost(x) {
                 if(player.Z.points.gte(30)) return Decimal.pow(10, Decimal.pow(10, x.add(1).log10().pow(tmp.F.scaling)));
-                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(tmp.F.scaling).mul(player.Z.points.gte(19)?1:10))
+                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(tmp.F.scaling)).mul(player.Z.points.gte(19)?1:10)
             },
             canAfford() { 
                 let cost = this.cost()
@@ -799,7 +799,7 @@ addLayer("F", {
             title: "Fd2", 
             cost(x) {
                 if(player.Z.points.gte(30)) return Decimal.pow(10, Decimal.pow(10, x.add(1).log10().pow(tmp.F.scaling)));
-                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(tmp.F.scaling.pow(2)).mul(player.Z.points.gte(19)?1:100))
+                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(tmp.F.scaling.pow(2))).mul(player.Z.points.gte(19)?1:100)
             },
             canAfford() { 
                 return player[this.layer][upg('F',55)?"points":"F1"].gte(this.cost()) 
@@ -830,7 +830,7 @@ addLayer("F", {
             title: "Fd3",  
             cost(x) {
                 if(player.Z.points.gte(30)) return Decimal.pow(10, Decimal.pow(10, x.add(1).log10().pow(tmp.F.scaling)));
-                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(tmp.F.scaling.pow(3)).mul(player.Z.points.gte(19)?1:1e4))
+                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(tmp.F.scaling.pow(3))).mul(player.Z.points.gte(19)?1:1e4)
             },
             canAfford() { 
                 return player[this.layer][upg('F',55)?"points":"F1"].gte(this.cost()) 
@@ -861,7 +861,7 @@ addLayer("F", {
             title: "Fd4",  
             cost(x) {
                 if(player.Z.points.gte(30)) return Decimal.pow(10, Decimal.pow(10, x.add(1).log10().pow(tmp.F.scaling)));
-                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(tmp.F.scaling.pow(4)).mul(player.Z.points.gte(19)?1:1e7))
+                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(tmp.F.scaling.pow(4))).mul(player.Z.points.gte(19)?1:1e7)
             },
             canAfford() { 
                 return player[this.layer][upg('F',55)?"points":"F1"].gte(this.cost()) 
@@ -892,7 +892,7 @@ addLayer("F", {
             title: "Fd5",  
             cost(x) {
                 if(player.Z.points.gte(30)) return Decimal.pow(10, Decimal.pow(10, x.add(1).log10().pow(tmp.F.scaling)));
-                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(tmp.F.scaling.pow(5)).mul(player.Z.points.gte(19)?1:1e11))
+                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(tmp.F.scaling.pow(5))).mul(player.Z.points.gte(19)?1:1e11)
             },
             canAfford() { 
                 return player[this.layer][upg('F',55)?"points":"F1"].gte(this.cost()) 
@@ -923,7 +923,7 @@ addLayer("F", {
             title: "Fd6",   
             cost(x) {
                 if(player.Z.points.gte(30)) return Decimal.pow(10, Decimal.pow(10, x.add(1).log10().pow(tmp.F.scaling)));
-                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(tmp.F.scaling.pow(6)).mul(player.Z.points.gte(19)?1:1e16))
+                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(tmp.F.scaling.pow(6))).mul(player.Z.points.gte(19)?1:1e16)
             },
             canAfford() { 
                 return player[this.layer][upg('F',55)?"points":"F1"].gte(this.cost()) 
@@ -954,7 +954,7 @@ addLayer("F", {
             title: "Fd7",
             cost(x) {
                 if(player.Z.points.gte(30)) return Decimal.pow(10, Decimal.pow(10, x.add(1).log10().pow(tmp.F.scaling)));
-                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(tmp.F.scaling.pow(7)).mul(player.Z.points.gte(19)?1:1e22))
+                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(tmp.F.scaling.pow(7))).mul(player.Z.points.gte(19)?1:1e22)
             },
             canAfford() { 
                 return player[this.layer][upg('F',55)?"points":"F1"].gte(this.cost()) 
@@ -985,7 +985,7 @@ addLayer("F", {
             title: "Fd8", 
             cost(x) {
                 if(player.Z.points.gte(30)) return Decimal.pow(10, Decimal.pow(10, x.add(1).log10().pow(tmp.F.scaling)));
-                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(tmp.F.scaling.pow(8)).mul(player.Z.points.gte(19)?1:1e29))
+                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(tmp.F.scaling.pow(8))).mul(player.Z.points.gte(19)?1:1e29)
             },
             canAfford() { 
                 return player[this.layer][upg('F',55)?"points":"F1"].gte(this.cost()) 
@@ -1020,7 +1020,7 @@ addLayer("F", {
             title: "刻度加速（Tickspeed）",
             cost(x) {
                 if(player.Z.points.gte(30)) return Decimal.pow(10, Decimal.pow(10, x.add(1).log10().pow(tmp.F.scaling)));
-                return Decimal.pow(10, x.pow(tmp.F.scaling).mul(player.Z.points.gte(19)?1:1e10))
+                return Decimal.pow(10, x.pow(tmp.F.scaling)).mul(player.Z.points.gte(19)?1:1e10)
             },
             canAfford() { 
                 return player[this.layer][upg('F',55)?"points":"F1"].gte(this.cost()) 
