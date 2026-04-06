@@ -646,7 +646,7 @@ addLayer("E", {
         },
         95: {
             title:'E45',
-            cost(){ return n(player.Z.points.gte(12) ? 1e178 : 1e315); },     
+            cost(){ return n(player.Z.points.gte(12) ? 1e178 : '1e315'); },     
             description: "Eb5-7 amt 增强 C。(1.15^x)",
             unlocked() { return (hasUpgrade(this.layer,94))},
             effect()  { 
@@ -660,7 +660,7 @@ addLayer("E", {
         101: {
             title:'E46',
             description: "Em 效果指数 +0.02。",
-            cost(){ return n(player.Z.points.gte(12) ? 1e183 : 1e325); },     
+            cost(){ return n(player.Z.points.gte(12) ? 1e183 : '1e325'); },     
             unlocked() { return (challengeCompletions('E',31)>=3 && player.Z.points.gte(11))},
         },
         102: {
